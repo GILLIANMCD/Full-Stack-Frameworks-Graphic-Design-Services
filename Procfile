@@ -1,1 +1,1 @@
-web: python app.py
+web gunicorn graphic_design_services.wsgi.application

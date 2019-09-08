@@ -1,12 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 body {
     font-family: Arial;
+    }
+a {
+    text-transform: uppercase;
+    color: #fff;
 }
 
+/*Font Decoration*/
+h1 {
+    color: #fff;
+}
 
+.navbar-light .navbar-brand {
+    color: #3500d3;
+}
+.logo {
+    font-family: 'Tangerine', cursive;
+    font-size: 6em;
+    text-shadow: 4px 4px 4px #3500d3;
+}
 .icon-bar {
     background-color: #fff;
+   }
+
+
+.btn-primary {
+    background-color: #3500d3;
+    border-color: #3500d3;
+    
 }
 
+.form-control {
+    border: 2px solid #3500d3;
+}
 .accountform {
     padding-top: 20px;
 }
@@ -15,11 +43,7 @@ form {
     width: 50%;
 }
 
-.logo {
-    font-family: 'Tangerine', serif;
-    font-size: 6em;
-    text-shadow: 4px 4px 4px #aaa;
-}
+
 
 /*Sticky Footer*/
 .footer {
