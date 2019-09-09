@@ -18,13 +18,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5511#n-@f24si^n&55j-y^udqu#!5)gm%8+h*2kp-e$g*gh852'
+SECRET_KEY = os.environ.get('SECRET_KEY', '5511#n-@f24si^n&55j-y^udqu#!5)gm%8+h*2kp-e$g*gh852'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['2b82e289899446a38d4ec926b6ac6be0.vfs.cloud9.us-east-1.amazonaws.com',
-                'graphic-design-services.herokuapp.com']
+ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'),
+                 os.environ.get('HOSTNAME')]
+                 
+host = os.environ.get('SITE_HOST'),
+if host:
+    ALLOWED_HOSTS.append(host)
 
 
 # Application definition
@@ -81,7 +85,7 @@ WSGI_APPLICATION = 'graphic_design_services.wsgi.application'
 #    }
 #}
 
-DATABASES = {'default': dj_database_url.parse("postgres://xaylafazoctutx:a6c7648b268053d2fcd37aa97d9724218033d5ae9adbf4d28c529a027f4fc91e@ec2-79-125-2-142.eu-west-1.compute.amazonaws.com:5432/d8mblhcptvutok")}
+DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
