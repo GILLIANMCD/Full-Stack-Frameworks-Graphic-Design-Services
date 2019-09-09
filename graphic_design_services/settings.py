@@ -23,7 +23,8 @@ SECRET_KEY = '5511#n-@f24si^n&55j-y^udqu#!5)gm%8+h*2kp-e$g*gh852'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['2b82e289899446a38d4ec926b6ac6be0.vfs.cloud9.us-east-1.amazonaws.com']
+ALLOWED_HOSTS = ['2b82e289899446a38d4ec926b6ac6be0.vfs.cloud9.us-east-1.amazonaws.com',
+                'graphic-design-services.herokuapp.com']
 
 
 # Application definition
